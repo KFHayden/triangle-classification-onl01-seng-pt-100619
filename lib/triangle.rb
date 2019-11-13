@@ -7,15 +7,15 @@ class Triangle
   end
   
   def kind
-    if @a <= 0 || @b <= 0 || @c <= 0
+    if a <= 0 || b <= 0 || c <= 0
       raise TriangleError
-    elsif @a + @b <= @c || @b + @c <= @a || @a + @c <= @b
+    elsif a + b <= c || b + c <= a || a + c <= b
       raise TriangleError
     end
       
-    if @a == @b && @b == @c
+    if a == b && b == c
       :equilateral
-    elsif (@a != @b) && (@b != @c) && (@a != @c)
+    elsif (@a != b) && (@b != c) && (@a != c)
       :scalene
     else
       :isosceles
